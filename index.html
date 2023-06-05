@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Y JS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="supercontenedor" id="supercontainer">
+
+        <div class="tema">
+            <h1>Libreria Math</h1>
+        </div>
+    
+        <div class="container">    
+    
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese numero para realizar las funciones: </h2>
+                    <input type="number" id="input-num" name="input-num">
+                    <h3 id="result"></h3>
+                    <h2 id="numero"></h2>
+                </div>
+    
+    
+                <div class="botones">                    
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="mate.Absoluto()" role="button"><span class="text">Absoluto</span></button>
+                    </div>
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="mate.Truncar()" role="button"><span class="text">Truncar</span></button>
+                    </div>
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="mate.Redondear()" role="button"><span class="text">Redondear</span></button>
+                    </div>
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="mate.Raiz()" role="button"><span class="text">Raiz</span></button>
+                    </div>
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="mate.Random()" role="button"><span class="text">Random</span></button>
+                    </div>
+                    
+                </div>
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+import math
+
+class FuncionesMath:
+    def Absoluto(self):
+        numero = float(input("Introduce un número: "))
+        print("Valor absoluto:", abs(numero))
+    
+    def Truncar(self):
+        numero = float(input("Introduce un número: "))
+        print("Se ha redondeado por truncamiento:", math.trunc(numero))
+    
+    def Redondear(self):
+        numero = float(input("Introduce un número: "))
+        print("Numero redondeado:", round(numero))
+    
+    def Raiz(self):
+        numero = float(input("Introduce un número: "))
+        print("La raiz cuadrada de:", math.sqrt(numero))
+    
+    def Random(self):
+        aleatorio = random.randint(1, 100)
+        print("Numero aleatorio generado:", aleatorio)
+
+    
+funciones_math = FuncionesMath()
+
+funciones_math.Absoluto()
+funciones_math.Truncar()
+funciones_math.Redondear()
+funciones_math.Raiz()
+funciones_math.Random()
+
+        
+                        </code>
+                      </pre>
+                </div>
+    
+                </div>
+    
+    
+            </form>
+    
+        </div>
+
+
+
+
+
+        <div class="tema">
+            <h1>Ejercicio 1 - Operación aritmética</h1>
+        </div>
+    
+        <div class="container">
+    
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese numeros para calcular la operacion: </h2>
+                    <img src="./img/FormulaGeneral.png" alt="">
+                    <label for="input-numA"> A: <input type="number" id="input-numA" name="input-numA">  </label>
+                    <label for="input-numB"> B: <input type="number" id="input-numB" name="input-numB">  </label>
+                    <label for="input-numC"> C: <input type="number" id="input-numC" name="input-numC">  </label>
+    
+                    <h3 id="result2"></h3>
+                    <h2 id="numero2"></h2>
+                </div>
+    
+    
+                <div class="botones">
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="operar.Operacion()" role="button"><span class="text">Calcular</span></button>
+                    </div>                    
+                </div>
+                
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Operaciones:
+    def Operacion(self):
+        a = float(input("Ingresa el valor de a: "))
+        b = float(input("Ingresa el valor de b: "))
+        c = float(input("Ingresa el valor de c: "))
+        discriminante = b**2 - 4*a*c
+        if discriminante < 0:
+            print("El discriminante es negativo, no se puede calcular la raíz cuadrada.")
+        else:
+            resultado = (-b + discriminante**0.5) / (2*a)
+            print("Resultado:", resultado)
+
+operar = Operaciones()
+operar.Operacion()
+
+    
+
+        
+                        </code>
+                      </pre>
+                </div>
+    
+            </form>    
+        </div>
+        
+
+
+                
+        <div class="tema">
+            <h1> Ejercicio 2 - Operaciones</h1>
+        </div>
+
+
+        <div class="container">
+    
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese numeros para realizar las funciones: </h2>
+                    <img src="./img/operacion-removebg-preview.png" alt="">
+
+                    <label for="input-numA2"> A: <input type="number" id="input-numA2" name="input-numA">  </label>
+                    <label for="input-numB2"> B: <input type="number" id="input-numB2" name="input-numB">  </label>
+    
+                    <h3 id="result3"></h3>
+                    <h2 id="numero3"></h2>
+                </div>
+    
+    
+                <div class="botones">
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="operar.Operacion2()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div>
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+
+class Operaciones:
+
+    def Operacion2(self):
+        a = float(input("Ingresa el valor de a: "))
+        b = float(input("Ingresa el valor de b: "))
+        operacion = ((3 + 5 * 8) < 3 and (((-6 / 3) * 4) + 2 < 2)) or (a > b)
+        print("Resultado:", operacion)
+
+operar = Operaciones()
+operar.Operacion2()
+
+
+
+
+                        </code>
+                      </pre>
+                </div>    
+    
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 3 - Intercambiar variables</h1>
+        </div>
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese los valores para realizar el intercambio: </h2>
+                    <label for="input-numA3"> A: <input type="number" id="input-numA3" name="input-numA">  </label>
+                    <label for="input-numB3"> B: <input type="number" id="input-numB3" name="input-numB">  </label>
+                    
+                    <h3>Nuevos Valores:</h3>
+                    <h2 id="nuevoA"></h2>
+                    <h2 id="nuevoB"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="inter.intercambiar()" role="button"><span class="text">Intercambiar</span></button>
+                    </div>
+                    
+                </div>
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Intercambio:
+    def intercambiar(self):
+        a = float(input("Ingresa el valor de a: "))
+        b = float(input("Ingresa el valor de b: "))
+        aux = a
+        a = b
+        b = aux
+        print("A =", a)
+        print("B =", b)
+        
+inter = Intercambio()
+inter.intercambiar()
+
+                        </code>
+                      </pre>
+                </div>  
+
+            </form>
+
+        </div>
+
+        <div class="tema">
+            <h1> Ejercicio 4 , 5 y 6 - Suma de numeros</h1>
+        </div>
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese los valores para realizar la suma: </h2>
+                    <label for="input-numA4"> A: <input type="number" id="input-numA4" name="input-numA">  </label>
+                    <label for="input-numB4"> B: <input type="number" id="input-numB4" name="input-numB">  </label>
+                    <label for="input-numB4"> C: <input type="number" id="input-numC4" name="input-numC">  </label>
+
+                    
+                    <h3>Resultado</h3>
+                    <h2 id="resultadoSuma"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="sum.sumar()" role="button"><span class="text">Sumar</span></button>
+                    </div>
+                    
+                </div>
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+
+calS = CalculoSegundos()
+calS.calcular()
+class Suma:
+    def sumar(self):
+        a = float(input("Ingresa el valor de a: "))
+        b = float(input("Ingresa el valor de b: "))
+        c = float(input("Ingresa el valor de c: "))
+        suma = a + b + c
+        print("La suma de los números es:", suma)
+sum = Suma()
+sum.sumar()
+        
+                        </code>
+                      </pre>
+                </div>    
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 7 - Estructuras Secuenciales</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese los valores para calcular la cantidad total de segundos: </h2>
+                    <label for="input-numA5">Horas: <input type="number" id="input-numA5" name="input-numA">  </label>
+                    <label for="input-numB5">Minutos: <input type="number" id="input-numB5" name="input-numB">  </label>
+                    <label for="input-numB5">Segundos: <input type="number" id="input-numC5" name="input-numC">  </label>
+
+                    
+                    <h3>Total de segundos:</h3>
+                    <h2 id="resultadoSegundos"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="calS.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div>  
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+
+class CalculoSegundos:
+    def calcular(self):
+        a = float(input("Ingresa las horas: "))
+        b = float(input("Ingresa los minutos: "))
+        c = float(input("Ingresa los segundos: "))
+        Shoras = a * 3600
+        Sminutos = b * 60
+        totalSegundos = Shoras + Sminutos + c
+        print("Total de segundos:", totalSegundos)
+
+        
+                        </code>
+                      </pre>
+                </div>  
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 8 - Radio y Longitud de un Circulo</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese el radio para el calculo:</h2>
+                    <label for="input-numA6"> Radio: <input type="number" id="input-numA6" name="input-numA">  </label>
+
+                    
+                    <h2 id="area"></h2>
+                    <h2 id="longitud"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3>Hacer un programa para ingresar el radio de un circulo y se reporte su área y la longitud de la circunferencia.
+                    </div>
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="calC.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div> 
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+import math
+
+class CalculoCirculo:
+    def calcular(self, r):
+        pi = 3.1416
+        area = pi * (r ** 2)
+        longitud = 2 * pi * r
+        print(f"Area: {area:.2f}")
+        print(f"Longitud: {longitud:.2f}")
+
+calC = CalculoCirculo()
+
+
+        
+                        </code>
+                      </pre>
+                </div>   
+
+            </form>
+
+        </div>
+
+
+        
+        <div class="tema">
+            <h1> Ejercicio 9 - Porcentaje de hombres y mujeres</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese la cantidad de hombres y mujeres:</h2>
+                    <label for="input-numA7"> Hombres: <input type="number" id="input-numA7" name="input-numA">  </label>
+                    <label for="input-numA7"> Mujeres: <input type="number" id="input-numB7" name="input-num7">  </label>
+
+                    
+                    <h2 id="Phombres"></h2>
+                    <h2 id="Pmujeres"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3>Un maestro desea saber que porcentaje de hombres y que porcentaje de mujeres hay en un grupo de estudiantes.
+                    </div>
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="calP.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div> 
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class CalculoPorcentaje:
+    def calcular(self, h, m):
+        total = h + m
+        Phombres = (h / total) * 100
+        Pmujeres = (m / total) * 100
+        print(f"Porcentaje de Hombres: {Phombres:.2f}%")
+        print(f"Porcentaje de Mujeres: {Pmujeres:.2f}%")
+
+calP = CalculoPorcentaje()
+        
+                        </code>
+                      </pre>
+                </div>   
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 10 - Calculo de minutos en examenes</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese la cantidad de examenes:</h2>
+                    <label for="input-numA8"> Examen A: <input type="number" id="input-numA8" name="input-numA">  </label>
+                    <label for="input-numB8"> Examen B: <input type="number" id="input-numB8" name="input-numB">  </label>
+                    <label for="input-numB8"> Examen C: <input type="number" id="input-numC8" name="input-numC">  </label>
+
+
+
+                    
+                    <h2 id="CMhoras"></h2>
+                    <h2 id="CMminutos"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3>Un profesor prepara tres cuestionarios para una evaluación final: A, B y C. Se sabe que se tarda 5 minutos en revisar el cuestionario A, 8 en revisar el cuestionario B y 6 en el C. La cantidad de exámenes de cada tipo se entran por teclado. ¿Cuántas horas y cuántos minutos se tardará en revisar todas las evaluaciones?
+                    </div>
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="calMin.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+lass CalculoMinutos:
+    def calcular(self, a, b, c):
+        cantA = a * 5
+        cantB = b * 8
+        cantC = c * 6
+        total = cantA + cantB + cantC
+        CMhoras = total / 60
+        CMminutos = total % 60
+        print(f"Horas: {int(CMhoras)}")
+        print(f"Minutos: {CMminutos}")
+
+calMin = CalculoMinutos()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+        
+        <div class="tema">
+            <h1> Ejercicio 11 - Descuento del 15% de una tienda</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese el total de compra:</h2>
+                    <label for="input-numA9">Total: <input type="number" id="input-numA9" name="input-numA">  </label>                    
+                    <h2 id="dcto"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3>Una tienda ofrece un descuento del 15% sobre el total de la compra y un cliente desea saber cuánto deberá pagar finalmente por su compra.
+                    </div>
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="calDesc.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div>
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class CalculoDescuento:
+    def calcular(self):
+        a = float(input("Ingrese el precio del producto: "))
+        dcto = a - (a * 0.15)
+        print("Descuento de:", round(dcto, 2))
+        
+calDesc = CalculoDescuento()
+                        </code>
+                      </pre>
+                </div>    
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 12 - Calificacion Final</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese calificaciones:</h2>
+                    <label for="input-numA10">Nota 1: <input type="number" id="input-numA10" name="input-numA">  </label>
+                    <label for="input-numB10">Nota 2: <input type="number" id="input-numB10" name="input-numA">  </label>
+                    <label for="input-numC10">Nota 3: <input type="number" id="input-numC10" name="input-numA">  </label>
+                    <label for="input-numD10">Exam. Final: <input type="number" id="input-numD10" name="input-numA">  </label>
+                    <label for="input-numE10">Trbj. Final: <input type="number" id="input-numE10" name="input-numA">  </label>                    
+                    
+                    <h2 id="CFtotal"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3>Un alumno desea saber cuál será su calificación final en la materia de Algoritmos. Dicha calificación se compone de los siguientes porcentajes: 
+                        <ul>
+                            <li>55% del promedio de sus tres calificaciones parciales.</li>
+                            <li>30% de la calificación del examen final.</li>
+                            <li>15% de la calificación de un trabajo final.</li>
+                        </ul>
+
+                    </div>
+                        <div class="botonn">
+                        <button type="button" class="boton" onclick="calFin.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div>   
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class CalculoCalificacionFinal:
+    def calcular(self):
+        a = float(input("Ingrese la calificación del primer parcial: "))
+        b = float(input("Ingrese la calificación del segundo parcial: "))
+        c = float(input("Ingrese la calificación del tercer parcial: "))
+        d = float(input("Ingrese la calificación del examen final: "))
+        e = float(input("Ingrese la calificación del trabajo final: "))
+        prom = ((a + b + c) / 3) * 0.55
+        calExam = d * 0.30
+        calTrabajo = e * 0.15
+        CFtotal = prom + calExam + calTrabajo
+        print("Su calificación final es de:", round(CFtotal, 2))
+        
+calFin = CalculoCalificacionFinal()
+        
+                        </code>
+                      </pre>
+                </div> 
+
+            </form>
+
+        </div>
+
+
+
+
+
+        <div class="tema">
+            <h1> Ejercicio 13 - Par o Impar</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese numero:</h2>
+                    <label for="input-varA1"><input type="number" id="input-varA1" name="input-varA1">  </label>                    
+                    <h2 id="paroimpar"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3> Ingrese un número entero y reportar si es par o impar.</div>
+                        <div class="botonn">
+                        <button type="button" class="boton" onclick="calParImpar.calcular()" role="button"><span class="text">Click</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class NumParOImpar:
+    def calcular(self):
+        a = int(input("Ingrese un número entero: "))
+        if a % 2 == 0:
+            print("El número", a, "es par")
+        else:
+            print("El número", a, "es impar")
+            
+calParImpar = NumParOImpar()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 14 - Alumno aprobado o desaprobado</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese nota:</h2>
+                    <label for="input-varA2">Nota 1: <input type="number" id="input-varA2" name="input-varA2">  </label>
+                    <label for="input-varB2">Nota 2: <input type="number" id="input-varB2" name="input-varB2">  </label>
+                    <label for="input-varC2">Nota 3: <input type="number" id="input-varC2" name="input-varC2">  </label>  
+
+                    <h2 id="aprobdesaprob"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3>Determinar si un alumno aprueba o reprueba un curso, sabiendo que aprobará si su promedio de tres calificaciones es mayor o igual a 70; reprueba caso contrario.   </div>
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="aprob.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class AprobDesaprob:
+    def calcular(self):
+        a = float(input("Ingrese la calificación del primer examen: "))
+        b = float(input("Ingrese la calificación del segundo examen: "))
+        c = float(input("Ingrese la calificación del tercer examen: "))
+        prom = (a + b + c) / 3
+        
+        if prom >= 70:
+            print("Alumno: Aprobado con", round(prom, 2))
+        else:
+            print("Alumno: Desaprobado con", round(prom, 2))
+            
+aprob = AprobDesaprob()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 15 - Descuento si la compra supera a $100</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese cantidad a pagar:</h2>
+                    <label for="input-varA3"><input type="number" id="input-varA3" name="input-varA3">  </label> 
+
+                    <h2 id="dcto100"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3> En un almacén se hace un 20% de descuento a los clientes cuya compra supere los $100. ¿Cuál será la cantidad que pagará una persona por su compra?</div>
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="descuento.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+lass Dcto100:
+    def calcular(self):
+        a = float(input("Ingrese el valor de A: "))
+        dcto100 = a - a * 0.2
+        if a > 100:
+            print("Su total es de:", round(dcto100, 2), "$")
+        else:
+            print("Su total es de:", round(a, 2), "$")
+    
+descuento = Dcto100()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+        
+        <div class="tema">
+            <h1> Ejercicio 16 -  Operaciones con 2 números</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese los numeros para operar:</h2>
+                    <label for="input-varA4">A: <input type="number" id="input-varA4" name="input-varA4">  </label>
+                    <label for="input-varB4">B: <input type="number" id="input-varB4" name="input-varB4">  </label>                    
+
+                    <h2 id="result2Op"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3> Leer 2 números; si son iguales que los multiplique, si el primero es mayor que el segundo que los reste y si no que los sume.  </div>
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="op2.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div>   
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Operacion2num:
+    def calcular(self):
+        a = float(input("Ingrese el valor de A: "))
+        b = float(input("Ingrese el valor de B: "))
+        sum = a + b
+        rest = a - b
+        if a == b:
+            print("Numeros iguales -> Multiplicacion:", round(a * b, 2))
+        elif a > b:
+            print(a, "es mayor que", b, "-> Resta:", round(rest, 2))
+        else:
+            print(b, "es mayor que", a, "-> Suma:", round(sum, 2))
+
+op2 = Operacion2num()
+        
+                        </code>
+                      </pre>
+                </div> 
+
+            </form>
+
+        </div>
+
+        <div class="tema">
+            <h1> Ejercicio 17 - Descuento</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese valores:</h2>
+                    <label for="input-varA6">Precio por kilo:      <input type="number" id="input-varA6" name="input-varA6"></label>
+                    <label for="input-varB6">Cantidad de kilos: <input type="number" id="input-varB6" name="input-varB6"></label>                   
+                
+                    <h2 id="dctomanz"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3> Una frutería ofrece las manzanas con descuento según la siguiente tabla: <img src="./img/dct.png" alt="">Determinar cuánto pagará una persona que compre manzanas en esa frutería. 
+                    </div> 
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="dctoMan.calcular()" role="button"><span class="text">Calcular</span></button>
+                    </div>
+                    
+                </div>   
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class DctoManzana:
+    def calcular(self):
+        a = float(input("Ingrese el valor de A: "))
+        b = int(input("Ingrese el valor de B: "))
+        total = a * b
+        if b > 2 and b <= 5:
+            dcto = total - (total * 0.10)
+            print("Total a pagar:", round(dcto, 2), "$")
+        elif b > 5 and b <= 10:
+            dcto = total - (total * 0.15)
+            print("Total a pagar:", round(dcto, 2), "$")
+        elif b > 10:
+            dcto = total - (total * 0.20)
+            print("Total a pagar:", round(dcto, 2), "$")
+        else:
+            print("Total a pagar:", round(total, 2), "$")
+
+dctoMan = DctoManzana()
+        
+                        </code>
+                      </pre>
+                </div> 
+
+            </form>
+
+        </div>
+
+        
+        <div class="tema">
+            <h1> Ejercicio 18 -  Día de la semana según un número</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese numero:</h2>
+                    <label for="input-varA7"><input type="number" id="input-varA7" name="input-varA7"></label>                
+                    <h2 id="diaSem"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3> Elaborar un programa que me muestre los días de las semanas cuando ingrese los siete primeros números. 
+                    </div> 
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="diaSemana.calcular()" role="button"><span class="text">Click</span></button>
+                    </div>
+                    
+                </div>   
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class DiasSem:
+    def calcular(self):
+        a = int(input("Introduce un número del 1 al 7: "))
+        if a == 1:
+            print("Lunes")
+        elif a == 2:
+            print("Martes")
+        elif a == 3:
+            print("Miércoles")
+        elif a == 4:
+            print("Jueves")
+        elif a == 5:
+            print("Viernes")
+        elif a == 6:
+            print("Sábado")
+        elif a == 7:
+            print("Domingo")
+        else:
+            print("Número inválido")
+
+diaSemana = DiasSem()
+
+        
+                        </code>
+                      </pre>
+                </div> 
+
+            </form>
+
+        </div>
+
+        <div class="tema">
+            <h1> Ejercicio 19 -  Significado de aniversario</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese numero:</h2>
+                    <label for="input-varA8"><input type="number" id="input-varA8" name="input-varA8"></label>                
+                    <h2 id="añosBoda"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3>Elaborar un programa que me muestre el significado de aniversario de cada década hasta los 60. <img src="./img/boda.png" alt="">
+                    </div> 
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="anioBoda.calcular()" role="button"><span class="text">Click</span></button>
+                    </div>
+                    
+                </div>  
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class AñosBoda:
+    def calcular(self):
+        a = int(input("Introduce el número de años de casados: "))
+        if a == 10:
+            print("Bodas de hojalata")
+        elif a == 20:
+            print("Bodas de porcelana")
+        elif a == 30:
+            print("Bodas de perlas")
+        elif a == 40:
+            print("Bodas de rubí")
+        elif a == 50:
+            print("Bodas de oro")
+        elif a == 60:
+            print("Bodas de diamante")
+        else:
+            print("Año inválido")
+
+anioBoda = AñosBoda()
+                        </code>
+                      </pre>
+                </div>  
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 20 -  Menu</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Elija una Opcion:</h2>
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="men.elevar()" role="button"><span class="text">Elevar num</span></button>
+                    </div>
+
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="men.Raiz()" role="button"><span class="text">Raiz</span></button>
+                    </div>
+
+                    <div class="botonn">
+                        <button type="button" class="boton" onclick="location.href='#supercontainer'" role="button"><span class="text">Salir</span></button>
+                    </div>
+                </div>
+                
+
+
+                <div class="botones">
+                    <div class="enunciado"><h3 class="TituloEnun">Enunciado:</h3>Hacer un programa que tenga un menú con las siguientes opciones:  
+                        <ul>
+                            <li>Opción 1: Elevar un número a una potencia X
+                            </li>
+                            <li>Opción 2: Sacar la raíz cuadrada de un número
+                            </li>
+                            <li>Opción 3: Salir
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Menu:
+
+    def elevar(self):
+        num = int(input("Ingrese el numero a elevar: "))
+        x = int(input("Ingrese la cantidad a elevar: "))
+        print("Resultado:", num ** x)
+
+    def Raiz(self):
+        num = int(input("Ingrese el numero: "))
+        print("Resultado:", math.sqrt(num))
+
+
+men = Menu()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 21 -  Suma de los N primeros números</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese cantidad de digitos a sumar:</h2>
+                    <label for="input-varA10"><input type="number" id="input-varA10" name="input-varA10"></label>                
+                    <h2 id="resultIterador"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3>Calcular la suma de los “N” primeros números.</div> 
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="it.iterar()" role="button"><span class="text">Click</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Iteracion:
+
+    def iterar(self):
+        a = int(input("Ingrese el número: "))
+        suma = 0
+        for i in range(a+1):
+            suma += i
+        print("Resultado: ", suma)
+
+
+it = Iteracion()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 22 -  Ciclo Para – Hasta – Hacer</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese el tope de dijitos a sumar:</h2>
+                    <label for="input-varB11"><input type="number" id="input-varB11" name="input-varB11"></label>                                
+                    <h2 id="resultEjer22"></h2>
+                    <h2 id="result2Ejer22"></h2>
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3>Se desea calcular independientemente la suma de los números pares e impares comprendidos entre 1 y 50. </div> 
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="suma50.calcular()" role="button"><span class="text">Click</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Suma50num:
+
+    def calcular(self):
+        b = int(input("Ingrese el número: "))
+        sumPar = 0
+        sumImpar = 0
+        for i in range(2, b):
+            if i % 2 == 0:
+                sumPar += i
+            else:
+                sumImpar += i
+        print("La suma de los pares es:", sumPar)
+        print("La suma de los impares es:", sumImpar)
+
+
+suma50 = Suma50num()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 23 -  Ciclo Para – Hasta – Hacer</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese 10 numeros haciendo click en el boton</h2>
+                    <h2 id="resultEjer23"></h2>
+                    <h2 id="result2Ejer23"></h2>
+                    <h2 id="result3Ejer23"></h2>
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3>Leer 10 números e imprimir cuantos son positivos, cuantos negativos y cuantos neutros. </div> 
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="sumPNN.calcular()" role="button"><span class="text">Iniciar</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Ejer23:
+
+    def calcular(self):
+        sumPos = 0
+        sumNeg = 0
+        sumNeu = 0
+        for i in range(1, 11):
+            num = int(input(f"Ingrese el número {i}: "))
+            if num > 0:
+                sumPos += 1
+            elif num < 0:
+                sumNeg += 1
+            else:
+                sumNeu += 1
+        print("La suma de los positivos es:", sumPos)
+        print("La suma de los negativos es:", sumNeg)
+        print("La suma de los neutros es:", sumNeu)
+
+
+sumPNN = Ejer23()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="tema">
+            <h1> Ejercicio 24 -  Ciclo Para – Hasta – Hacer</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese 10 calificaciones haciendo click en el boton</h2>
+                    <h2 id="resultEjer24"></h2>
+                    <h2 id="result2Ejer24"></h2>
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3> Suponga que se tiene un conjunto de calificaciones de un grupo de 10 alumnos. Realizar un algoritmo para calcular la calificación promedio y la calificación más baja de todo el grupo. </div> 
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="calBaja.calcular()" role="button"><span class="text">Iniciar</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Ejer24:
+    def calcular(self):
+        suma = 0
+        prom = 0
+        cal_baja = 999999
+        for i in range(1, 11):
+            num = float(input(f"Ingrese calificación {i}: "))
+            suma += num
+
+            if num < cal_baja:
+                cal_baja = num
+
+        prom = suma / 10
+
+        print("El promedio es: ", prom)
+        print("La calificación más baja es: ", cal_baja)
+
+
+calBaja = Ejer24()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        
+        <div class="tema">
+            <h1> Ejercicio 25 -  Ciclo Mientras – Hacer</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese numero para el factorial</h2>
+                    <label for="input-ejer25"><input type="number" id="input-ejer25" name="input-ejer25"></label>                                
+
+                    <h2 id="resultEjer25"></h2>
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3> Calcular el factorial de un número mayor o igual a 0. </div> 
+                        
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="cal25.calcular()" role="button"><span class="text">Iniciar</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Ejer25:
+    def calcular(self):
+        a = float(input("Ingrese un número mayor a 0: "))
+        while a < 0:
+            print("¡Ingrese un número mayor a 0!")
+            a = float(input("Ingrese un número mayor a 0: "))
+        i = 1
+        fact = 1
+        while i <= a:
+            fact *= i
+            i += 1
+
+        print("El factorial de ", a, " es: ", fact)
+
+
+cal25 = Ejer25()
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="tema">
+            <h1> Ejercicio 26 -  Ciclo Mientras – Hacer</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Ingrese numero para la suma cuadrada</h2>
+                    <label for="input-ejer26"><input type="number" id="input-ejer26" name="input-ejer26"></label>                                
+
+                    <h2 id="resultEjer26"></h2>
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3> 
+                        Calcular la siguiente sumatoria de los “N” elementos: <br><br>
+                        
+                        S = 1 + 4 + 9 + …   </div> 
+                        
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="cal26.calcular()" role="button"><span class="text">Iniciar</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Ejer26:
+    def calcular(self):
+        a = float(input("Ingrese un número: "))
+        i = 1
+        sum = 0
+        while i <= a:
+            sum += i ** 2
+            i += 1
+
+        print("La sumatoria de ", a, " es: ", sum)
+
+
+cal26 = Ejer26()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+
+
+        <div class="tema">
+            <h1> Ejercicio 27 -  Ciclo Mientras – Hacer</h1>
+        </div>
+
+
+
+        <div class="container">
+
+            <form class="formulario">
+                <div class="caja">
+                    <h2 class="sub" >Haga click en el boto para iniciar</h2>
+
+                    <h2 id="result1Ejer27"></h2>
+                    <h2 id="result2Ejer27"></h2>
+                    <h2 id="result3Ejer27"></h2>
+
+                </div>
+
+
+                <div class="botones">
+                    <div class="enunciado">
+                        <h3 class="TituloEnun">Enunciado:</h3> 
+                        Ingresar “N” enteros, visualizar la suma de los números pares de la lista, cuántos números pares existen y cuál es el promedio de los números impares. </div> 
+                        
+                        <div class="botonn">
+                            <button type="button" class="boton" onclick="cal27.calcular()" role="button"><span class="text">Iniciar</span></button>
+                    </div>
+                    
+                </div>    
+                <div class="contenedorcodigo">
+                    <h2>Codigo en Python:</h2>
+                    <pre class="codigo">
+                        <code>
+class Ejer27:
+    def calcular(self):
+        cant = int(input("Ingrese cantidad de enteros: "))
+        i = 0
+        sumPar = 0
+        contPar = 0
+        sumImpar = 0
+        contImpar = 0
+
+        while i < cant:
+            num = int(input(f"Ingrese el número entero ({i + 1}): "))
+            i += 1
+            if num % 2 == 0:
+                sumPar += num
+                contPar += 1
+            else:
+                sumImpar += num
+                contImpar += 1
+
+        print("Sumatoria de pares: ", sumPar)
+        print("Cantidad de pares: ", contPar)
+        print("Promedio de impares: ", round((sumImpar / contImpar), 2))
+
+
+cal27 = Ejer27()
+        
+                        </code>
+                      </pre>
+                </div>
+
+            </form>
+
+        </div>
+
+
+
+
+
+
+    </div>
+    
+
+
+
+
+<script src="./js/main.js"></script>
+
+</body>
+</html>

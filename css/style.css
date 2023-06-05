@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Sulphur+Point:wght@700&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css");
+/* font-family: 'Bruno Ace', cursive;
+    font-family: 'Lexend', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:white;
+    
+}
+
+
+.tema{
+    background-color: black;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    padding: 10px;
+
+}
+
+.container{
+    padding: 50px;
+    background-image: linear-gradient( 256deg,  rgba(15,2,2,1) 15%, rgba(36,163,190,1) 91.1% );}
+
+
+
+.formulario{
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario input {
+    border:none;
+    background: none;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    font-size: 35px;
+    width: 150px;
+    height: 50px;
+    border:solid rgb(76, 144, 184);
+
+}
+
+
+
+.caja{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    width:100%;
+    font-family: 'Sulphur Point', sans-serif;
+
+
+}
+
+.caja label{
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Bruno Ace', cursive;
+
+}
+
+.sub{
+    color:white;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.caja input{
+    font-family: 'Bruno Ace', cursive;
+
+}
+
+
+.num{
+    color:red;
+}
+
+.enunciado{
+    text-align: justify;
+    padding: 20px;
+    border:solid white;
+    border-radius: 20px;
+    font-family: 'Lexend', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.TituloEnun{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.caja img{
+    width: 400px;
+}
+.enunciado img{
+    width: 75%;
+
+}
+.enunciado ul{
+    padding: 20px;
+}
+
+
+.botones{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+ }
+
+ .botonn{
+    padding: 20px;
+ }
+
+
+
+
+ .boton {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .boton:active,
+  .boton:hover {
+    outline: 0;
+  }
+  
+  .boton span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .boton:hover span {
+    background: none;
+  }
+
+pre{
+    width: 500px;
+    height: 300px;
+
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #282c34;
+    color: #abb2bf;
+}
+
+
+.contenedorcodigo{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+.contenedorcodigo h2{
+    padding: 30px;
+}
+  
+  @media (min-width: 768px) {
+    .boton {
+      font-size: 24px;
+      min-width: 196px;
+    }
+  }
+  
+
